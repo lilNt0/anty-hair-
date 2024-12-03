@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anty Hair Baddies</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #ff4d94; /* Pink */
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffd6e6; /* Light Pink */
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero button:hover {
+            background-color: #ff3385;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .search-bar input {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 25px;
+            margin-top: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Cart Section */
+        .cart {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .cart h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cart button {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart button:hover {
+            background-color: #ff3385;
+        }
+
+        /* Shipping Section */
+        .shipping {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .shipping h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .shipping form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .shipping label {
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        .shipping input,
+        .shipping select {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .shipping button {
+            margin-top: 20px;
+            background-color: #ff4d94;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+
+        .shipping button:hover {
+            background-color: #ff3385;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #ff4d94;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Anty Hair Baddies</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#cart" id="view-cart" onclick="alert('Cart functionality is not implemented.')">View Cart (0)</a></li>
+                <li><a href="#shipping">Shipping</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Transform Your Hair with Anty Hair Baddies</h2>
+            <p>Premium products for every hair type, designed with care and elegance.</p>
+            <button onclick="window.location.href='#shop'">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()">
+    </section>
+	
+<!-- Products Section -->
+<section id="shop" class="products">
+    <h2>Shop Our Collection</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="gel.jpg" alt="Hair Gel" />
+            <h3>Hair Gel</h3>
+            <button onclick="addToCart('Hair Gel', 8.99)">Add to Cart</button>
+            <p>$8.99</p>
+        </div>
+        <div class="product-card">
+            <img src="shampoo.jpg" alt="Shampoo" />
+            <h3>Shampoo</h3>
+            <button onclick="addToCart('Shampoo', 12.99)">Add to Cart</button>
+            <p>$12.99</p>
+        </div>
+        <div class="product-card">
+            <img src="conditioner.jpg" alt="Conditioner" />
+            <h3>Conditioner</h3>
+            <button onclick="addToCart('Conditioner', 10.99)">Add to Cart</button>
+            <p>$10.99</p>
+        </div>
+        <!-- Ensure all product cards are inside the .product-list container -->
+        <div class="product-card">
+            <img src="edges.jpg" alt="Edge Brush" />
+            <h3>Edge Brush</h3>
+            <button onclick="addToCart('Edge Brush', 10.99)">Add to Cart</button>
+            <p>$10.99</p>
+        </div>
+        <div class="product-card">
+            <img src="hair-brush.jpg" alt="Hair Brush" />
+            <h3>Hair Brush</h3>
+            <button onclick="addToCart('Hair Brush', 10.99)">Add to Cart</button>
+            <p>$10.99</p>
+        </div>
+        <div class="product-card">
+            <img src="hair-comb.jpg" alt="Hair Comb" />
+            <h3>Hair Comb</h3>
+            <button onclick="addToCart('Hair Comb', 10.99)">Add to Cart</button>
+            <p>$10.99</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Initialize an empty cart
+    let cart = [];
+
+    // Function to add items to the cart
+    function addToCart(productName, productPrice) {
+        // Add item to the cart array
+        cart.push({ name: productName, price: productPrice });
+        updateCart();
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+        // Get the cart items container
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = '';
+
+        // Loop through cart items and display them
+        cart.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('cart-item');
+            itemElement.innerHTML = `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
+            cartItemsContainer.appendChild(itemElement);
+        });
+
+        // Update the total price
+        updateTotal();
+    }
+
+    // Function to update the total price in the cart
+    function updateTotal() {
+        let total = 0;
+        cart.forEach(item => {
+            total += item.price;
+        });
+
+        // Display the total price
+        document.getElementById('total-price').innerText = total.toFixed(2);
+    }
+
+    // Function for proceeding to checkout (for now it just alerts)
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+        } else {
+            alert('Proceeding to checkout...');
+        }
+    }
+</script>
+
+
+    <!-- Shipping Section -->
+    <section id="shipping" class="shipping">
+        <h2>Shipping Information</h2>
+        <form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="zip">Zip / Postal Code:</label>
+            <input type="text" id="zip" name="zip" required>
+                <!-- Add all country options -->
+				<label for="country">Select Your Country:</label>
+<select id="country" name="country" required>
+    <option value="US">United States</option>
+    <option value="CA">Canada</option>
+    <option value="GB">United Kingdom</option>
+    <option value="AU">Australia</option>
+    <option value="IN">India</option>
+    <option value="DE">Germany</option>
+    <option value="FR">France</option>
+    <option value="IT">Italy</option>
+    <option value="JP">Japan</option>
+    <option value="CN">China</option>
+    <option value="BR">Brazil</option>
+    <option value="RU">Russia</option>
+    <option value="ZA">South Africa</option>
+    <option value="MX">Mexico</option>
+    <option value="KR">South Korea</option>
+    <option value="AR">Argentina</option>
+    <option value="ES">Spain</option>
+    <option value="SE">Sweden</option>
+    <option value="NO">Norway</option>
+    <option value="DK">Denmark</option>
+    <option value="FI">Finland</option>
+    <option value="NZ">New Zealand</option>
+    <option value="KR">South Korea</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="SG">Singapore</option>
+    <option value="EG">Egypt</option>
+    <option value="PH">Philippines</option>
+    <option value="NG">Nigeria</option>
+    <option value="KE">Kenya</option>
+    <option value="NG">Nigeria</option>
+    <option value="NG">Nigeria</option>
+    <option value="PT">Portugal</option>
+    <option value="BE">Belgium</option>
+    <option value="CH">Switzerland</option>
+    <option value="PL">Poland</option>
+    <option value="AT">Austria</option>
+    <option value="GR">Greece</option>
+    <option value="TR">Turkey</option>
+    <option value="TH">Thailand</option>
+    <option value="MY">Malaysia</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="PK">Pakistan</option>
+    <option value="ID">Indonesia</option>
+    <option value="Vn">Vietnam</option>
+    <option value="TZ">Tanzania</option>
+    <option value="BD">Bangladesh</option>
+    <option value="CO">Colombia</option>
+    <option value="PE">Peru</option>
+    <option value="UA">Ukraine</option>
+    <option value="EG">Egypt</option>
+    <option value="KW">Kuwait</option>
+    <option value="QA">Qatar</option>
+    <option value="KW">Kuwait</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="BD">Bangladesh</option>
+</select>
+
+                <!-- Add more countries... -->
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+	<!-- Contact Us Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+    <div class="contact-details">
+        <p><strong>Phone:</strong> <a href="tel:+27826197616">082 619 7616</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Ntontomazibuko08@gmail.com">Ntontomazibuko08@gmail.com</a></p>
+		
+		
+		
+    </div>
+     <div class="form-group">
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+	 <button type="submit">Send Message</button>
+</div>
+    
+  
+</section>
+
+<!-- Footer Section -->
+    <footer>
+        <p>© 2024 Anty Hair Baddies. All rights reserved.</p>
+    </footer>
+	<p>If you have any questions or need assistance, feel free to reach out to us!</p>
+
+</body>
+
+</html>
